@@ -1,0 +1,22 @@
+/*it is just similar to the no consecutive 1s aur uska sirf square hame lena hai that's it*/
+
+int TotalWays(int n)
+	{
+	     if(n<=0){
+	       return 0;
+	   }
+	  long long oneend=1;
+	  long long zeroend=1;
+	  long long sum=oneend+zeroend;
+	  if(n==1){
+	      return sum*sum;
+	  }
+	  int i=2;
+	  while(i<=n){
+	      oneend=(zeroend)%1000000007;
+	      zeroend=(sum)%1000000007;
+	      sum=(oneend+zeroend)%1000000007;
+	      i++;
+	  }
+	  return (sum * sum)%1000000007;
+	}

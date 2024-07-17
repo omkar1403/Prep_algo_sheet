@@ -18,5 +18,4 @@
 	      i++;
 	  }
 	  return (sum)%1000000007;   //return the sum
-	 
 	}
